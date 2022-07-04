@@ -1,0 +1,23 @@
+{% extends "layouts.html" %}
+{% block content %}
+<h1>Hava Durumu</h1>
+
+<form>
+  <div class="form-group">
+    <label for="example">Anlık Hava Durumu</label>
+    <input type="text" class="form-control" name="data" placeholder="Şehir Girin">
+  </div>
+  <button type="submit" class="btn btn-primary">Ara</button>
+</form>
+
+<table class="table">
+  {% for a,b in result.items() %}
+          <tr>
+            <td>{{ a }}</td>
+            <td>{{ b }}</td>
+          </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock content %}

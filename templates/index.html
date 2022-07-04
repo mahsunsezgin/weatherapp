@@ -1,0 +1,13 @@
+{% extends "layouts.html" %}
+{% block content %}
+<h1>Hava Durumu</h1>
+
+<form action="{{ url_for('index') }}" method="post"> <!-- form verilerinin gönderileceği yeri tanımlıyoruz -->
+  <div class="form-group">
+    <label for="example">Anlık Hava Durumu</label>
+    <input type="text" class="form-control" name="data" placeholder="Şehir Girin"> <!-- form-control ile bootstrapin modern görünümünü elde ediyoruz -->
+  </div>
+  <button type="submit" class="btn btn-primary">Ara</button>
+</form>
+
+{% endblock content %}
